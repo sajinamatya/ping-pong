@@ -1,5 +1,5 @@
-import turtle as t
-import os                                                                                     
+import turtle as t  # importing the turtle module of python then aliasing it as "t"
+import os            # importing the os module                                                                          
                                                                                               
 
 # Score varibales
@@ -23,7 +23,7 @@ paddle_left.shapesize(stretch_wid=5, stretch_len=1)
 paddle_left.penup()
 paddle_left.goto(-350, 0)
 
-# Creating a right paddle for the game
+# Creating a right paddle section for the game 
 
 paddle_right = t.Turtle()
 paddle_right.speed(0)
@@ -33,7 +33,7 @@ paddle_right.color('orange')
 paddle_right.penup()
 paddle_right.goto(350, 0)
 
-# Creating a pong ball for the game
+# Creating a pong ball object  for the game
 
 ball = t.Turtle()
 ball.speed(0)
@@ -44,7 +44,7 @@ ball.goto(0, 0)
 ball_dx = 1 # Setting up the pixels for the ball movement.
 ball_dy = 1
 
-# Creating a pen for updating the Score
+# Creating a pen object  for updating the Score
 
 pen = t.Turtle()
 pen.speed(0)
@@ -56,7 +56,7 @@ pen.write("Player sajin: 0        Player shreeya: 0 ", align="center", font=('Mo
 
 
 
-# Moving the left Paddle using the keyboard
+# Moving the left Paddle  using the keyboard
 
 def paddle_left_up():
     y = paddle_left.ycor()
@@ -64,7 +64,7 @@ def paddle_left_up():
     paddle_left.sety(y)
 
 
-# Moving the left paddle dow
+# Moving the left paddle down
 
 def paddle_left_down():
     y = paddle_left.ycor()
@@ -88,7 +88,7 @@ def paddle_right_down():
     paddle_right.sety(y)
 
 
-# Keyboard binding
+# Keyboard binding part 
 
 win.listen()
 win.onkeypress(paddle_left_up, "w")
@@ -96,7 +96,7 @@ win.onkeypress(paddle_left_down, "s")
 win.onkeypress(paddle_right_up, "Up")
 win.onkeypress(paddle_right_down, "Down")
 
-# Main loop of the game
+# Main loop section  of the game
 
 while True:
     win.update()  # This methods is mandatory to run any game
@@ -133,7 +133,7 @@ while True:
                   align="center", font=('Monaco', 19, "normal"))
         
 
-    # Handling the collisions with paddles.
+    # Handling the collisions of balls  with paddles.
 
     if (ball.xcor() > 340) and (ball.xcor() < 350) and (
             ball.ycor() < paddle_right.ycor() + 40 and ball.ycor() > paddle_right.ycor() - 40):
