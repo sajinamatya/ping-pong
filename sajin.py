@@ -7,7 +7,7 @@ import os            # importing the os module
 player_a_score = 0
 player_b_score = 0
 
-win = t.Screen()  # creating a window for a game 
+win = t.Screen()  # creating a window for a game  ///
 win.title("Ping-Pong Game")  # Giving name to the game.
 win.bgcolor('green')  # providing color to the HomeScreen
 win.setup(width=800, height=600)  # Size of the game panel or screen
